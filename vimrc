@@ -22,3 +22,18 @@ set tabstop=4
 
 " Spelling enabled
 set spell spelllang=en_us
+
+" Search settings
+set ignorecase
+set smartcase
+
+" Fuzzy finding
+set path+=**
+let &wildignore = join(map(split(substitute(substitute(
+  \ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','), "v:val.','.v:val.'/'"), ',')
+
+" Netrw settings
+let g:netrw_banner=0
+let g:netrw_linestyle=2
+let g:netrw_sizestyle='h'
+let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'
