@@ -1,9 +1,9 @@
-" Custom quiet colorscheme wrapper
+" Custom quiet color scheme wrapper
 syntax on
 colorscheme quiet
 highlight Comment ctermfg=blue
 
-" Relative line number with abolsolute line number at current position
+" Relative line number with absolute line number at current position
 set number relativenumber
 
 " Exit terminal mode
@@ -19,3 +19,6 @@ set list
 
 " Tab spacing
 set tabstop=4
+
+" Spelling enabled
+set spell spelllang=en_us
