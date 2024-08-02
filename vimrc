@@ -1,10 +1,12 @@
 " Custom quiet color scheme wrapper
-syntax on
+set t_Co=256
+syntax enable
 colorscheme quiet
 highlight Comment ctermfg=blue
 
-" Relative line number with absolute line number at current position
-set number relativenumber
+" Relative line number with absolute
+" line number at current position
+set number
 
 " Exit terminal mode
 tnoremap <esc> <c-\><c-n>
@@ -30,7 +32,8 @@ set smartcase
 " Fuzzy finding
 set path+=**
 let &wildignore = join(map(split(substitute(substitute(
-  \ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','), "v:val.','.v:val.'/'"), ',')
+  \ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','),
+  \ "v:val.','.v:val.'/'"), ',')
 
 " Netrw settings
 let g:netrw_banner=0
