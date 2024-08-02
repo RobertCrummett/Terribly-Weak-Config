@@ -16,11 +16,11 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Highlight space
-set listchars=tab:>~,nbsp:_,trail:.
+set listchars=tab:>~,space:·,nbsp:_,trail:.
 set list
 
 " Tab spacing
-set tabstop=4
+set tabstop=4 expandtab
 
 " Spelling enabled
 set spell spelllang=en_us
