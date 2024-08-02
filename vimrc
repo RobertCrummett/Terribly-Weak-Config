@@ -4,11 +4,10 @@ syntax enable
 colorscheme quiet
 highlight Comment ctermfg=blue
 
-" Relative line number with absolute
-" line number at current position
+" Line number
 set number
 
-" Turn off arrows
+" Arrows
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Right> <Nop>
@@ -23,9 +22,11 @@ set listchars=tab:>~,space:·,nbsp:_,trail:.
 set list
 
 " Tab spacing
-set tabstop=4 expandtab
+set expandtab
+set tabstop=4
 
-" Spelling enabled
+" Spelling setting
+set nospell
 set spelllang=en_us
 
 " Search settings
