@@ -8,14 +8,17 @@ highlight Comment ctermfg=blue
 " line number at current position
 set number
 
-" Exit terminal mode
-tnoremap <esc> <c-\><c-n>
+" Turn off arrows
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Right> <Nop>
+noremap <Left> <Nop>
 
 " Highlight the 80th column
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
-" Highlight space
+" Mark spaces, tabs, trailing space
 set listchars=tab:>~,space:·,nbsp:_,trail:.
 set list
 
@@ -23,7 +26,7 @@ set list
 set tabstop=4 expandtab
 
 " Spelling enabled
-set spell spelllang=en_us
+set spelllang=en_us
 
 " Search settings
 set ignorecase
