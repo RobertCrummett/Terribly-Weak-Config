@@ -22,7 +22,6 @@ set listchars=tab:--,space:·,nbsp:_,trail:.
 set list
 
 " Tab spacing
-set expandtab
 set tabstop=4
 
 " Spelling setting
