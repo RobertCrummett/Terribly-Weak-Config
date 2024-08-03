@@ -18,7 +18,7 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 " Mark spaces, tabs, trailing space
-set listchars=tab:>~,space:·,nbsp:_,trail:.
+set listchars=tab:--,space:·,nbsp:_,trail:.
 set list
 
 " Tab spacing
