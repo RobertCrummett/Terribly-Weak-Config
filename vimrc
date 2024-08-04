@@ -4,7 +4,7 @@
 "-----------------------------------------------------------------------------
 " --- Philosophy ---
 "
-" intentionally simple
+" simple
 " necessary dependencies only
 " cross platform
 "
