@@ -1,11 +1,27 @@
-" Custom quiet color scheme wrapper
+" This is Vim
+set nocompatible
+
+" Colors
 set t_Co=256
 syntax enable
 colorscheme quiet
 highlight Comment ctermfg=blue
 
+" Backspace
+set backspace=indent,eol,start
+
+" Load file changes
+set autoread
+set history=1000
+set tabpagemax=10
+
 " Line number
 set number
+set ruler
+
+" Time out for escape key
+set ttimeout
+set ttimeoutlen=100
 
 " Arrows
 noremap <Up> <Nop>
@@ -18,19 +34,23 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%80v', 100)
 
 " Mark spaces and trailing space
-set listchars=tab:\ \ ,space:·,trail:.
+set listchars=tab:\ \ ,nbsp:+,space:·,trail:.
 set list
 
 " Tab spacing
 set tabstop=4
+set smarttab
 
 " Spelling setting
 set nospell
 set spelllang=en_us
 
 " Search settings
-set ignorecase
+set scrolloff=1
+set incsearch
+set wildmenu
 set smartcase
+set ignorecase
 
 " Fuzzy finding
 set path+=**
