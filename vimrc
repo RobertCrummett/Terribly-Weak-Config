@@ -18,6 +18,7 @@ set t_Co=256
 syntax enable
 colorscheme quiet
 highlight Comment ctermfg=blue
+highlight StatusLine ctermfg=white ctermbg=black cterm=bold
 
 " Backspace
 set backspace=indent,eol,start
@@ -32,7 +33,7 @@ set number
 
 " Status line
 set ruler
-set rulerformat=%80(%{strftime('%a\ %b\ %e\ %I:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 set laststatus=2
 let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
 function! UpdateStatusBar(timer)
