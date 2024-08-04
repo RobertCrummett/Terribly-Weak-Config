@@ -1,3 +1,15 @@
+"----------------------------------------------------------------------------
+" --- Nate's Vim settings ---
+"
+"-----------------------------------------------------------------------------
+" --- Philosophy ---
+"
+" intentionally simple
+" necessary dependencies only
+" cross platform
+"
+"-----------------------------------------------------------------------------
+
 " This is Vim
 set nocompatible
 
@@ -58,8 +70,7 @@ let &wildignore = join(map(split(substitute(substitute(
   \ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','),
   \ "v:val.','.v:val.'/'"), ',')
 
-" Netrw settings
-let g:netrw_banner=0
-let g:netrw_linestyle=2
+" File explorer settings
+let g:netrw_liststyle=1
 let g:netrw_sizestyle='h'
 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'
