@@ -29,7 +29,15 @@ set tabpagemax=10
 
 " Line number
 set number
+
+" Status line
 set ruler
+set rulerformat=%80(%{strftime('%a\ %b\ %e\ %I:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+set laststatus=2
+let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
+function! UpdateStatusBar(timer)
+  execute 'let &ro = &ro'
+endfunction
 
 " Time out for escape key
 set ttimeout
@@ -69,8 +77,8 @@ set ignorecase
 " Fuzzy finding
 set path+=**
 let &wildignore = join(map(split(substitute(substitute(
-  \ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','),
-  \ "v:val.','.v:val.'/'"), ',')
+	\ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','),
+	\ "v:val.','.v:val.'/'"), ',')
 
 " File explorer settings
 let g:netrw_liststyle=1
