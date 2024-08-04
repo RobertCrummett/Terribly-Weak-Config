@@ -15,10 +15,10 @@ noremap <Left> <Nop>
 
 " Highlight the 80th column
 highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
+call matchadd('ColorColumn', '\%80v', 100)
 
-" Mark spaces, tabs, trailing space
-set listchars=tab:--,space:·,nbsp:_,trail:.
+" Mark spaces and trailing space
+set listchars=tab:\ \ ,space:·,trail:.
 set list
 
 " Tab spacing
