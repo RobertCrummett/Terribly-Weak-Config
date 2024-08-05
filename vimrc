@@ -34,10 +34,11 @@ set number
 " Status line
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+
 set laststatus=2
 let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
 function! UpdateStatusBar(timer)
-  execute 'let &ro = &ro'
+	execute 'let &ro = &ro'
 endfunction
 
 " Time out for escape key
@@ -63,6 +64,9 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set smarttab
+
+" Intent
+set smartindent
 
 " Spelling setting
 set nospell
