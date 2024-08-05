@@ -33,7 +33,7 @@ set number
 
 " Status line
 set ruler
-set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M:%S\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+set rulerformat=%55(%=%{strftime('%a\ %b\ %d\ %X\ %p')}%)
 
 set laststatus=2
 let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
