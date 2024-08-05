@@ -76,8 +76,8 @@ set spelllang=en_us
 set scrolloff=1
 set incsearch
 set wildmenu
-set smartcase
 set ignorecase
+set smartcase
 
 " Fuzzy finding
 set path+=**
