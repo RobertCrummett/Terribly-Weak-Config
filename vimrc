@@ -19,8 +19,8 @@ syntax enable
 colorscheme quiet
 highlight Comment ctermfg=12
 highlight Todo ctermfg=49 cterm=bold
-highlight StatusLine ctermfg=white ctermbg=black cterm=bold
-highlight ColorColumn ctermfg=red ctermbg=black
+highlight StatusLine ctermfg=white ctermbg=16 cterm=bold
+highlight ColorColumn ctermfg=red ctermbg=16
 let &colorcolumn=join(range(81,999),",")
 
 " Backspace
@@ -36,7 +36,7 @@ set number
 
 " Status line
 set ruler
-set rulerformat=%55(%=%{strftime('%a\ %b\ %d\ %X\ %p')}%)
+set rulerformat=%55(%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}%)
 
 set laststatus=2
 let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
