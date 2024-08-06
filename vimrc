@@ -10,20 +10,23 @@
 "
 "-----------------------------------------------------------------------------
 
-" This is Vim
+" Vim
 set nocompatible
 
-" Colors
+" Color
 set t_Co=256
 syntax enable
 colorscheme quiet
-highlight Comment ctermfg=blue
+highlight Comment ctermfg=12
+highlight Todo ctermfg=49 cterm=bold
 highlight StatusLine ctermfg=white ctermbg=black cterm=bold
+highlight ColorColumn ctermfg=red ctermbg=black
+let &colorcolumn=join(range(81,999),",")
 
 " Backspace
 set backspace=indent,eol,start
 
-" Load file changes
+" File loading
 set autoread
 set history=1000
 set tabpagemax=10
@@ -51,10 +54,6 @@ noremap <Down> <Nop>
 noremap <Right> <Nop>
 noremap <Left> <Nop>
 
-" Highlight the 80th column
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%80v', 100)
-
 " Mark spaces and trailing space
 set listchars=tab:\ \ ,nbsp:+,space:·,trail:.
 set list
@@ -68,16 +67,19 @@ set smarttab
 " Intent
 set smartindent
 
-" Spelling setting
+" Spelling
 set nospell
 set spelllang=en_us
 
-" Search settings
+" Search
 set scrolloff=1
 set incsearch
 set wildmenu
 set ignorecase
 set smartcase
+
+" Mouse
+set mouse=
 
 " Fuzzy finding
 set path+=**
@@ -85,7 +87,7 @@ let &wildignore = join(map(split(substitute(substitute(
 	\ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','),
 	\ "v:val.','.v:val.'/'"), ',')
 
-" File explorer settings
+" File explorer
 let g:netrw_liststyle=1
 let g:netrw_sizestyle='h'
 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'
