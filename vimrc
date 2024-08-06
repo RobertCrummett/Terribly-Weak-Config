@@ -19,8 +19,8 @@ syntax enable
 colorscheme quiet
 highlight Comment ctermfg=12
 highlight Todo ctermfg=49 cterm=bold
-highlight StatusLine ctermfg=white ctermbg=black cterm=bold
-highlight ColorColumn ctermfg=red ctermbg=black
+highlight StatusLine ctermfg=white ctermbg=16 cterm=bold
+highlight ColorColumn ctermfg=red ctermbg=16
 let &colorcolumn=join(range(81,999),",")
 
 " Backspace
