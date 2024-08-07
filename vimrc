@@ -35,14 +35,17 @@ set tabpagemax=10
 set number
 
 " Status line
-set ruler
-set rulerformat=%55(%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}%)
-
-set laststatus=2
-let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
-function! UpdateStatusBar(timer)
-	execute 'let &ro = &ro'
-endfunction
+" on Windows disable, because timer makes cursor flicker
+if !has('win32')
+	set ruler
+	set rulerformat=%55(%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}%)
+	
+	set laststatus=2
+	let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
+	function! UpdateStatusBar(timer)
+		execute 'let &ro = &ro'
+	endfunction
+endif
 
 " Time out for escape key
 set ttimeout
