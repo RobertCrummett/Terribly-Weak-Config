@@ -79,6 +79,7 @@ set scrolloff=1
 set incsearch
 set wildmenu
 set ignorecase
+set hlsearch
 
 " Mouse
 set mouse=
@@ -88,8 +89,16 @@ set path+=**
 let &wildignore = join(map(split(substitute(substitute(
 	\ netrw_gitignore#Hide(), '\.\*', '*', 'g'), '\\.', '.', 'g'), ','),
 	\ "v:val.','.v:val.'/'"), ',')
+set wildignore+=**/venv/**
+set wildignore+=**/__pycache__/**
+set wildignore+=**/node_modules/**
 
 " File explorer
 let g:netrw_liststyle=1
 let g:netrw_sizestyle='h'
 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'
+
+" Rip grepping
+if executable("rg")
+	set grepprg=rg\ --vimgrep\ --smart-case
+endif
