@@ -79,7 +79,6 @@ set scrolloff=1
 set incsearch
 set wildmenu
 set ignorecase
-set smartcase
 
 " Mouse
 set mouse=
