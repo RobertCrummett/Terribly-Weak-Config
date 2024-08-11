@@ -32,7 +32,7 @@ set history=1000
 set tabpagemax=10
 
 " Line number
-set number
+set number relativenumber
 
 " Status line
 " on Windows disable, because timer makes cursor flicker
@@ -41,7 +41,7 @@ if !has('win32')
 	set rulerformat=%55(%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}%)
 	
 	set laststatus=2
-	let timer = timer_start(1000, 'UpdateStatusBar',{'repeat':-1})
+	let timer = timer_start(1000, 'UpdateStatusBar', {'repeat':-1})
 	function! UpdateStatusBar(timer)
 		execute 'let &ro = &ro'
 	endfunction
