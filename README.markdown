@@ -1,4 +1,4 @@
-## Nate's Vim Configuration
+# Nate's Vim Configuration
 
 Drop this into your `.vim` folder and you should be good to go!
 
