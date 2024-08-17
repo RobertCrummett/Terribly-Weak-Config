@@ -40,9 +40,6 @@ set autoread
 set history=1000
 set tabpagemax=10
 
-" Line number
-set number relativenumber
-
 " Status line
 " on Windows disable, because timer makes cursor flicker
 if !has('win32')
