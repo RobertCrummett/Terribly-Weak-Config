@@ -8,7 +8,7 @@
 " necessary dependencies only
 " cross platform
 "
-"-----------------------------------------------------------------------------
+"-----------------------------------------------------------------------------dfdfdf
 
 " Vim
 set nocompatible
@@ -24,7 +24,12 @@ highlight StatusLine ctermfg=white ctermbg=16 cterm=bold
 highlight ColorColumn ctermfg=red ctermbg=16
 
 " Color column
-let &colorcolumn=join(range(81,999),",")
+nnoremap <silent> <F2> :let &cc = &cc == '' ? join(range(81,256),",") : '' <CR>
+
+" Spelling
+set nospell
+set spelllang=en_us
+nnoremap <silent> <F3> :set invspell<CR>
 
 " Backspace
 set backspace=indent,eol,start
@@ -69,10 +74,6 @@ set smarttab
 
 " Intent
 set smartindent
-
-" Spelling
-set nospell
-set spelllang=en_us
 
 " Search
 set scrolloff=1
