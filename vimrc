@@ -20,8 +20,6 @@ syntax enable
 colorscheme quiet
 highlight Comment ctermfg=12
 highlight Todo ctermfg=49 cterm=bold
-highlight Note ctermfg=49 cterm=bold
-match Note /Note:/
 highlight StatusLine ctermfg=15 ctermbg=0 cterm=bold
 highlight ColorColumn ctermfg=9 ctermbg=0
 highlight SpecialKey ctermfg=238
