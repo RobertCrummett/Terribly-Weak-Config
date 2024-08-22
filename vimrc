@@ -13,15 +13,18 @@
 " Vim
 set nocompatible
 
-" Colors
+" Colors 
 set t_Co=256
 set background=dark
 syntax enable
 colorscheme quiet
 highlight Comment ctermfg=12
 highlight Todo ctermfg=49 cterm=bold
-highlight StatusLine ctermfg=white ctermbg=16 cterm=bold
-highlight ColorColumn ctermfg=red ctermbg=16
+highlight Note ctermfg=49 cterm=bold
+match Note /Note:/
+highlight StatusLine ctermfg=15 ctermbg=0 cterm=bold
+highlight ColorColumn ctermfg=9 ctermbg=0
+highlight SpecialKey ctermfg=238
 
 " Color column
 nnoremap <silent> <F2> :let &cc = &cc == '' ? join(range(81,256),",") : '' <CR>
