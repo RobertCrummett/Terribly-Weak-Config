@@ -13,6 +13,11 @@
 " Vim
 set nocompatible
 
+" Fileytpe detection
+filetype on
+filetype plugin on
+filetype indent on
+
 " Colors 
 set t_Co=256
 set background=dark
@@ -77,6 +82,7 @@ noremap <silent> <F5> :set invnumber<CR>
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+set noexpandtab
 set smarttab
 
 " Intent

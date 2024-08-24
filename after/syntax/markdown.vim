@@ -6,4 +6,3 @@ highlight markdownH3 ctermfg=214 cterm=bold
 highlight markdownH4 ctermfg=214 cterm=bold
 highlight markdownH5 ctermfg=214 cterm=bold
 highlight markdownH6 ctermfg=214 cterm=bold
-
