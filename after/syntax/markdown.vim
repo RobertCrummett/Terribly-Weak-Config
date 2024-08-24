@@ -6,3 +6,9 @@ highlight markdownH3 ctermfg=214 cterm=bold
 highlight markdownH4 ctermfg=214 cterm=bold
 highlight markdownH5 ctermfg=214 cterm=bold
 highlight markdownH6 ctermfg=214 cterm=bold
+
+" Highlight keywords
+highlight MarkdownNote ctermfg=49 cterm=bold
+let m = matchadd("MarkdownNote", "Note:")
+highlight MarkdownDefinition ctermfg=197 cterm=bold
+let m = matchadd("MarkdownDefinition", "Definition:")
