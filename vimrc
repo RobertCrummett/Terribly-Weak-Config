@@ -80,11 +80,6 @@ noremap <silent> <F5> :set invnumber<CR>
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
-set smarttab
-
-" Intent
-set smartindent
 
 " Search
 set scrolloff=1
