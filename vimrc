@@ -12,6 +12,10 @@
 
 " Vim
 set nocompatible
+set ttyfast
+set lazyredraw
+set novisualbell
+set t_ut=
 
 " Fileytpe detection
 filetype on
