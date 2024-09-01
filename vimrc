@@ -54,6 +54,7 @@ if !has('win32')
 	set laststatus=2
 	let timer = timer_start(1000, 'UpdateStatusBar', {'repeat':-1})
 	function! UpdateStatusBar(timer)
+		set lazyredraw
 		execute 'let &ro = &ro'
 	endfunction
 endif
