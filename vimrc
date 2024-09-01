@@ -12,10 +12,12 @@
 
 " Vim
 set nocompatible
-set ttyfast
-set lazyredraw
+
+" No annyoing sounds
+set noerrorbells
 set novisualbell
-set t_ut=
+set t_vb=
+set tm=500
 
 " Fileytpe detection
 filetype on
@@ -56,8 +58,8 @@ if !has('win32')
 	set rulerformat=%55(%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}%)
 	
 	set laststatus=2
-	let timer = timer_start(1000, 'UpdateStatusBar', {'repeat':-1})
-	function! UpdateStatusBar(timer)
+	let timer = timer_start(1000, 'UpdateStatusBar', {'repeat', -1})
+	function UpdateStatusBar(timer)
 		execute 'let &ro = &ro'
 	endfunction
 endif
