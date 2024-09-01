@@ -5,4 +5,4 @@ setlocal softtabstop=2
 setlocal expandtab
 
 " Change make program to latexmk
-setlocal makeprg=latexmk\ $*\ %\
+setlocal makeprg=latexmk\ $*\ %
