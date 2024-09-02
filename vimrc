@@ -85,6 +85,21 @@ nnoremap <silent> <F4> :set invlist<CR>
 " Numbers
 noremap <silent> <F5> :set invnumber<CR>
 
+" Transparent background
+let t:is_transparent = 0
+function! ToggleTransparent()
+	if t:is_transparent == 0
+		highlight Normal ctermbg=NONE
+		highlight StatusLine ctermfg=15 ctermbg=NONE cterm=bold
+		let t:is_transparent = 1
+	else
+		highlight Normal ctermbg=0
+		highlight StatusLine ctermfg=15 ctermbg=0 cterm=bold
+		let t:is_transparent = 0
+	endif
+endfunction
+nnoremap <silent> <F6> :call ToggleTransparent()<CR>
+
 " Tab spacing
 set tabstop=4
 set softtabstop=4
