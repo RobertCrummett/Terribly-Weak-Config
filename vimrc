@@ -51,6 +51,7 @@ set backspace=indent,eol,start
 
 " File loading
 set autoread
+set autowrite
 set history=1000
 set tabpagemax=10
 
