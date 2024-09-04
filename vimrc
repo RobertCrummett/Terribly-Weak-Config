@@ -16,12 +16,6 @@ set nocompatible
 " Fast redrawing
 set lazyredraw
 
-" No annyoing sounds
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-
 " Fileytpe detection
 filetype on
 filetype plugin on
@@ -49,16 +43,9 @@ nnoremap <silent> <F3> :set invspell<CR>
 " Backspace
 set backspace=indent,eol,start
 
-" File loading
-set autoread
-set autowrite
-set history=1000
-set tabpagemax=10
-
 " Status line
-" on Windows disable, because timer makes cursor flicker
+set laststatus=2
 if !has('win32')
-	set laststatus=2
 	let gitBranch=trim(system("git branch 2> /dev/null | sed -e 's/..//'"))
 	set statusline=%F\ (%{gitBranch})%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}
 
@@ -66,6 +53,8 @@ if !has('win32')
 	function! UpdateStatusBar(timer)
 		execute 'let &ro = &ro'
 	endfunction
+else
+	set statusline=%F
 endif
 
 " Time out for escape key
