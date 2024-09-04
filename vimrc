@@ -4,9 +4,9 @@
 "-----------------------------------------------------------------------------
 " --- Philosophy ---
 "
-" simple
-" necessary dependencies only
-" cross platform
+" SIMPLE
+" UNDERSTAND EVERYTHING
+" FUNCTION KEYS TOGGLE INTERESTING SETTINGS
 "
 "-----------------------------------------------------------------------------
 
