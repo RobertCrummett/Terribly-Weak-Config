@@ -80,7 +80,6 @@ noremap <Left> <Nop>
 
 " Mark spaces and trailing space
 set listchars=tab:\ \ ,nbsp:+,space:·,trail:.
-set list
 nnoremap <silent> <F4> :set invlist<CR>
 
 " Numbers
