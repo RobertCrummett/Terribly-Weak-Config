@@ -26,11 +26,12 @@ set t_Co=256
 set background=dark
 syntax enable
 colorscheme quiet
-highlight Comment ctermfg=12
-highlight Todo ctermfg=49 cterm=bold
-highlight StatusLine ctermfg=15 ctermbg=0 cterm=bold
-highlight ColorColumn ctermfg=9 ctermbg=0
-highlight SpecialKey ctermfg=238
+highlight! Comment ctermfg=12
+highlight! Todo ctermfg=49 cterm=bold
+highlight! StatusLine ctermfg=15 ctermbg=0 cterm=bold
+highlight! ColorColumn ctermfg=9 ctermbg=0
+highlight! SpecialKey ctermfg=238
+highlight! link Error Normal
 
 " Color column
 nnoremap <silent> <F2> :let &cc = &cc == '' ? join(range(81,256),",") : '' <CR>
