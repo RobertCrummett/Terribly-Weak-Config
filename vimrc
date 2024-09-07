@@ -125,4 +125,4 @@ endi
 set omnifunc=syntaxcomplete#Complete
 
 " Universal ctags
-set tags=/Users/robertcrummett/.vim/system.tags,tags
+set tags=$HOME/.vim/tags,tags;$HOME

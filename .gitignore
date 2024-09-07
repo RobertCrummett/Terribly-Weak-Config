@@ -2,4 +2,4 @@ spell
 *.swp
 .netrwhist
 .DS_Store
-*/tags
+tags
