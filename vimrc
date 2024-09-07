@@ -13,25 +13,23 @@
 " Vim
 set nocompatible
 
-" Fast redrawing
-set lazyredraw
-
 " Fileytpe detection
-filetype on
 filetype plugin on
 filetype indent on
 
 " Colors 
 set t_Co=256
+syntax on
 set background=dark
-syntax enable
-colorscheme quiet
-highlight! Comment ctermfg=12
-highlight! Todo ctermfg=49 cterm=bold
-highlight! StatusLine ctermfg=15 ctermbg=0 cterm=bold
-highlight! ColorColumn ctermfg=9 ctermbg=0
-highlight! SpecialKey ctermfg=238
-highlight! link Error Normal
+colorscheme wildcharm
+
+" colorscheme quiet
+" highlight! Comment ctermfg=12
+" highlight! Todo ctermfg=49 cterm=bold
+" highlight! StatusLine ctermfg=15 ctermbg=0 cterm=bold
+" highlight! ColorColumn ctermfg=9 ctermbg=0
+" highlight! SpecialKey ctermfg=238
+" highlight! link Error Normal
 
 " Color column
 nnoremap <silent> <F2> :let &cc = &cc == '' ? join(range(81,256),",") : '' <CR>
@@ -57,10 +55,6 @@ if !has('win32')
 else
 	set statusline=%F
 endif
-
-" Time out for escape key
-set ttimeout
-set ttimeoutlen=100
 
 " Arrows
 noremap <Up> <Nop>
@@ -115,11 +109,20 @@ set wildignore+=**/__pycache__/**
 set wildignore+=**/node_modules/**
 
 " File explorer
-let g:netrw_liststyle=1
+let g:netrw_keepdir = 0
+let g:netrw_banner = 0
+let g:netrw_localcopydircmd = 'cp -r'
+let g:netrw_liststyle = 1
 let g:netrw_sizestyle='h'
 let g:netrw_list_hide= netrw_gitignore#Hide() .. '.*\.swp$'
 
-" Rip grepping
+" Grepping
 if executable("rg")
 	set grepprg=rg\ --vimgrep\ --smart-case
-endif
+endi
+
+" Word completion
+set omnifunc=syntaxcomplete#Complete
+
+" Universal ctags
+set tags=/Users/robertcrummett/.vim/system.tags,tags
