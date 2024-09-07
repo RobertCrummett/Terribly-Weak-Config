@@ -32,12 +32,12 @@ colorscheme wildcharm
 " highlight! link Error Normal
 
 " Color column
-nnoremap <silent> <F2> :let &cc = &cc == '' ? join(range(81,256),",") : '' <CR>
+noremap <silent> <F2> :let &cc = &cc == '' ? join(range(81,256),",") : '' <CR>
 
 " Spelling
 set nospell
 set spelllang=en_us
-nnoremap <silent> <F3> :set invspell<CR>
+noremap <silent> <F3> :set invspell<CR>
 
 " Backspace
 set backspace=indent,eol,start
@@ -46,7 +46,7 @@ set backspace=indent,eol,start
 set laststatus=2
 if !has('win32')
 	let gitBranch=trim(system("git branch 2> /dev/null | sed -e 's/..//'"))
-	set statusline=%F\ (%{gitBranch})%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}
+	set statusline=%F\ (%{gitBranch})%=%{strftime('%a\ %b\ %-d\ %-I\:%M\:%S\ %p')}\ 
 
 	let timer = timer_start(1000, 'UpdateStatusBar', {'repeat':-1})
 	function! UpdateStatusBar(timer)
@@ -64,7 +64,7 @@ noremap <Left> <Nop>
 
 " Mark spaces and trailing space
 set listchars=tab:\ \ ,nbsp:+,space:·,trail:.
-nnoremap <silent> <F4> :set invlist<CR>
+noremap <silent> <F4> :set invlist<CR>
 
 " Numbers
 noremap <silent> <F5> :set invnumber<CR>
