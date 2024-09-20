@@ -126,3 +126,6 @@ set omnifunc=syntaxcomplete#Complete
 
 " Universal ctags
 set tags=$HOME/.vim/tags,tags;$HOME
+
+" Code running commands
+command Python !python %
