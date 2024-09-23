@@ -90,7 +90,7 @@ set softtabstop=4
 set shiftwidth=4
 
 " Search
-set scrolloff=1
+set scrolloff=5
 set incsearch
 set wildmenu
 set ignorecase
